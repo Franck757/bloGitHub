@@ -1,0 +1,16 @@
+      <div><?php echo $billet['$id']; ?></div>
+
+      <form action="index.php" method="post">
+        <fieldset>
+          <legend>création de billet</legend>
+
+          <label for="titre">titre (10 characters max):</label>
+          <input type="text" id="titre" name="titre" required maxlength="10">
+
+          <label for="texte">Description</label>
+          <textarea id="texte" name="texte"></textarea>
+
+          <button type="submit">creer</button>
+
+        </fieldset>
+      </form>
