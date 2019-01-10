@@ -1,3 +1,6 @@
+<?php if (isset($_SESSION['user'])) { ?>
+  <p><?= $_SESSION['user']['pseudo'] ?></p>
+<?php } ?>
 <form action="newBillet.php" method="post" enctype="multipart/form-data">
   <fieldset>
     <legend>création de billet</legend>

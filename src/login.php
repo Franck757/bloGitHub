@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include_once "database.php";
 include_once 'repository/billetRepository.php';
 
@@ -8,13 +10,21 @@ if (empty($_POST)) {
 } else {
   $db = openDatabase('blog','root','troiswa');
   $user = findUserByPseudo($db, $_POST['pseudo']);
-  var_dump($user);
+  // var_dump($user);  die;
   if (empty($user)) {
-
+    header('Location: login.php');
   } else {
-    // Comparer le mot de passe avec la valeur dans le formulaire
+    if ($user['mot_de_passe'] === $_POST['password']) {
+      session_abort();
+      session_start();
+      $_SESSION['user'] = $user;
+      header('Location: newBillet.php');
+    } else {
+      header('Location: login.php');
+    }
   }
-
-  header("Location: http://localhost/blog/src/user.php?id=$id"); // Redirection HTTP
+  // Comparer le mot de passe avec la valeur dans le formulaire
 }
+
+// header("Location: http://localhost/blog/src/user.php?id=$id"); // Redirection HTTP
 ?>

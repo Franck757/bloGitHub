@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include_once "database.php";
 include_once 'repository/billetRepository.php';
 
@@ -11,6 +13,7 @@ if (empty($_POST)) {
 
   move_uploaded_file($tmp, '/home/wamont2-10/sites/blog/public/image/'.$filename);
   $_POST['image'] = $filename;
+  $_POST['auteur'] = $_SESSION['user']['id'];
 
 
   $db = openDatabase('blog','root','troiswa');
