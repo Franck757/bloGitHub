@@ -7,9 +7,8 @@ if (empty($_POST)) {
   include "../templates/base.phtml";
 } else {
   $db = openDatabase('blog','root','troiswa');
-  $db->query('SET NAMES UTF8');
   $user = findUserByPseudo($db, $_POST['pseudo']);
-  var_dump($user); die;
+  var_dump($user);
   if (empty($user)) {
 
   } else {
