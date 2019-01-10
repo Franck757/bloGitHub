@@ -1,16 +1,26 @@
-      <div><?php echo $billet['$id']; ?></div>
+<form action="newBillet.php" method="post" enctype="multipart/form-data">
+  <fieldset>
+    <legend>création de billet</legend>
 
-      <form action="index.php" method="post">
-        <fieldset>
-          <legend>création de billet</legend>
+    <label for="titre">titre (10 characters max):</label>
+    <input type="text" id="titre" name="titre" value="" required maxlength="10">
 
-          <label for="titre">titre (10 characters max):</label>
-          <input type="text" id="titre" name="titre" required maxlength="10">
+    <label for="texte">Description</label>
+    <textarea id="texte" name="texte" value=""></textarea>
 
-          <label for="texte">Description</label>
-          <textarea id="texte" name="texte"></textarea>
+    <input type="file" name="image">
+    <label for="image">Inserez une image</label>
 
-          <button type="submit">creer</button>
+    <button type="submit" value="">creer</button>
+    <label for="categorie">Choisissez une catégorie:</label>
+    <select id="categorie">
+      <option value="">-- Choisissez une categorie --</option>
+      <option value="categorieUn">categorie1</option>
+      <option value="categorieDeux">categorie2</option>
+      <option value="categorieTrois">categorie3</option>
+    </select>
 
-        </fieldset>
-      </form>
+<button><a href="../src/newUser.php" class="connex">Inscription</a></button>
+<button><a href="../src/login.php" class="connex">connexion</a></button>
+  </fieldset>
+</form>

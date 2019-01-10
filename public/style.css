@@ -1,0 +1,54 @@
+body {
+  background-image: url(https://wallpaperbrowse.com/media/images/background-18.jpg);
+  background-size: 100%;
+}
+label, legend {
+  color: #010048;
+  font-weight: bold;
+}
+h1 {
+  font-size:35px;
+}
+.fas {
+  color :#560003;
+}
+h2 {
+  text-decoration: underline;
+  color: white;
+}
+.user {
+  text-decoration: underline;
+
+  color: white;
+}
+.mail {
+  text-decoration: underline;
+  color:white;
+}
+.connex {
+  text-decoration: none;
+  color: black;
+}
+.cancel {
+  color: white;
+  text-decoration: none;
+}
+
+/*.BUTTON_PSG {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   color: #000000;
+   font-family: Verdana;
+   font-size: 24px;
+   font-weight: 100;
+   padding: 11px;
+   box-shadow: 0px 0px 20px 8px #000000;
+   -webkit-box-shadow: 0px 0px 20px 8px #000000;
+   -moz-box-shadow: 0px 0px 20px 8px #000000;
+   text-shadow: 1px 1px 20px #000000;
+   border: solid #337FED 1px;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+}*/

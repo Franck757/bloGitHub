@@ -7,10 +7,10 @@ $id = $_GET['id'];
 $db = openDatabase('blog','root','troiswa');
 $db->query('SET NAMES UTF8');
 
-$billet = findBillet($db, $id);
-//var_dump($billet);
+$user = findUser($db, $id);
 
-$template = "../templates/billet.phtml";
+
+$template = "../templates/user.phtml";
 
 include_once "../templates/base.phtml";
 
