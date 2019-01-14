@@ -8,7 +8,6 @@ $db = openDatabase('blog','root','troiswa');
 $db->query('SET NAMES UTF8');
 
 $billet = findBillet($db, $id);
-//var_dump($billet);
 
 $template = "../templates/billet.phtml";
 

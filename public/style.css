@@ -20,9 +20,9 @@ input {
 }
 form {
   width: 25%;
-  margin: 0 auto;
+  margin: auto;
 }
-section p {
+.intro {
   text-align: center;
   color: #fff;
 }
