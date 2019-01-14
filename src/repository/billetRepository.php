@@ -8,6 +8,14 @@ function findBillet(PDO $db, string $id) : array
   return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
 
+function findAllBillet(PDO $db) : array
+{
+  $statement = $db->prepare("SELECT `titre`, `corps_de_texte`, `image` FROM `billet`");
+  $err = $statement->execute();
+
+  return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
 /* création d'un billet */
 function writeArticle(PDO $db, array $data)
 {

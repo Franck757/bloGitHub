@@ -1,5 +1,11 @@
-<article class="">
-  <h2><?= echo $billet[0]['titre'] ?></h2>
-  <p><?= $billet[0]['corps_de_texte'] ?></p>
-  <p><img src="../public/image/<?= $billet[0]['image'] ?>"/></p>
+<article>
+
+  <?php foreach ($billet as $b ): ?>
+
+  <h2><?= $b['titre'] ?></h2>
+  <p><?= substr ($b['corps_de_texte'],0,200) ?></p>
+  <img src="../public/image/<?= $b['image'] ?>" />
+
+<?php endforeach; ?>
+
 </article>
