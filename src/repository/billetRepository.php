@@ -79,12 +79,12 @@ function writeArticle(PDO $db, array $data)
     * @param  string $pseudo [description]
     * @return array          [description]
     */
-    /*function findUserByMdp(PDO $db, string $pseudo) : array
+    function findUserByMdp(PDO $db, string $pseudo) : array
     {
     $statement = $db->prepare("SELECT * FROM `utilisateurs` WHERE `mot_de_passe` = ?");
     $err = $statement->execute([$mdp]);
 
     return $statement->fetch(PDO::FETCH_ASSOC);
-  }*/
+  }
 
   ?>
